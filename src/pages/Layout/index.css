@@ -1,0 +1,39 @@
+
+.nav{
+    background-color: #0986f4;
+    padding: .8rem;
+
+}
+
+.nav-primary {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.search{
+    display: block;
+}
+/* .nav-primary > h1 {
+    font-size: 2rem;
+} */
+/* 
+.navbar {
+    max-width: calc(100% - 5%);
+
+    margin: auto;
+    
+    list-style: none;
+    
+
+    
+    display: grid;
+   
+}
+
+
+.nav-item{
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+
+}
+ */

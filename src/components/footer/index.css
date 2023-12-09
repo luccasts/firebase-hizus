@@ -1,0 +1,19 @@
+.footer-background-color{
+  width: 100%;
+    position:absolute;
+
+    background-color: black;
+    padding: 50px;
+}
+
+/* .footer-grid{
+    
+    
+}
+
+.footer-nav-center{
+    width: calc(100% - 20%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */

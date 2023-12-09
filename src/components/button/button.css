@@ -1,0 +1,30 @@
+
+.button-price{
+
+    margin: 1rem auto;
+    display: block;
+    width: calc(100% - 20%);
+}
+
+.button-price-link {
+    border-radius: .3rem;
+    background-color: #2ea742;
+    display: block;
+
+    color:rgb(60, 60, 60);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    
+
+
+    letter-spacing: .09rem;
+  
+}
+
+
+.button-price-link:hover  {
+    background-color:#36d550;
+    color: white;
+}
