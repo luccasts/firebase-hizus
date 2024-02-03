@@ -1,35 +1,28 @@
-import { Link, Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 
 import "./index.css"
 import  {Search}  from "../../components/search/search"
+import { Hamburger } from "../../components/hamburger/Hamburger"
 export const Layout = () => {
-    
-            // <ul className="navbar">
-            //          <li className="nav-item"> <Link to={"/"}>home</Link></li>
-            //          <li className="nav-item"><Link to={"/product"}>produtos</Link></li>
-            // </ul>    
+    function closed(){
+        <Hamburger  onClick={()=> closed} isInitiallyOpen={false} />
 
-    function toggleProduct (){
-        const nav = document.getElementById('nav')  
     }
-    const btn = document.getElementById('btn-nav')    
-            
-    btn?.addEventListener('click', toggleProduct );
     return (
         <>
         <header id='nav' className="nav">
-            <h1 id='h1-nav-title'> <a href="/"  className="nav-title nav-one-line ">Hizus</a> </h1>
-            <nav className="nav-primary">
-                <button id='btn-nav' className="nav-button">Produtos</button>
-                <ul>
-                    <li><a href="/">Periféricos</a></li>
-                    <li><a href="/">Hardware</a></li>
+        <h1 id='nav-h1'> <a href="/"  className="">Hizus</a> </h1>
+            {/* <Hamburger  onClick={()=> closed} isInitiallyOpen={true} ></Hamburger > */}
+            <div className="search">
+                <Search></Search>
+            </div>
+            <nav onClick={closed} className="nav-primary">
+                <ul className="nav-ul">
+                    <li className="nav-li"><a href="/">Periféricos</a></li>
+                    <li className="nav-li"><a href="/">Hardware</a></li>
                 </ul>
-                <div className="search">
-                 <Search></Search>
-                </div>
+               
             </nav>
-
         </header>
                     <Outlet />
         </>

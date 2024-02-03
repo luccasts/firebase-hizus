@@ -1,4 +1,4 @@
-import bannerImg from "../../_assets/img/adventure-time-.jpg"
+import bannerImg from "../../_assets/img/bannerfullseize.jpg"
 import "./banner.css"
 export const Banner = () => {
     return(

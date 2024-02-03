@@ -1,6 +1,6 @@
 
 .button-price{
-
+    border: none;
     margin: 1rem auto;
     display: block;
     width: calc(100% - 20%);

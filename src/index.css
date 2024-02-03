@@ -1,11 +1,33 @@
 :root {
   font-size: 62.5%;
+
+
+
+  /*Home / Card*/
+  --color-text:#5A636A;
+
+  /*SEARCH */
+  --color-bg-search:transparent;
+  --color-border-search:#fff;
+  --color-text--search:#cdcdcd;
+
+
+  /*NAV*/
+  --color-text-nav:#fff;
+  --color-bg-nav:#6a6a6a;
+
+  /*HOME*/
+  --color-bg-shadow-home:#2d2d2d;
+  --color-bg-home:#565656;
+
+  /*CARD*/
+  --color-bg-shadow-card:#000000;
 }
 
 *{
   margin: 0;
   padding: 0;
-  border-style: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,8 +36,17 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #5A636A;
-    background-color:#AFB3B7;
+    color: var(--color-text);
+    background-color:var(--color-bg-home);
+    
+}
+
+nav ul {
+  list-style: none;
+}
+nav ul li a{
+  text-decoration: none;
+  color:  var(--color-text);
 }
 
 code {

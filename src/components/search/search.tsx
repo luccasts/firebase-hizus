@@ -1,10 +1,13 @@
+import { CiSearch } from "react-icons/ci";
+
 import "./search.css"
 export const Search = () => {
     return(
         <div className="join-search">
-            <label className="label-search" htmlFor="search">emoji
-            <input className="input-search" type="search" placeholder="Pesquisar" />
-            </label>
+            <input id='Search' className="input-search" type="search" placeholder="Pesquisar" />
+            <button type="submit" className="button-search">
+                <CiSearch className="label-search-icon" />
+            </button>
         </div>
        
     )
