@@ -62,3 +62,10 @@
 .green-line-price{
     font-size: 2rem;
 }
+
+@media screen and (max-width:450px) {
+    .ul-list{
+        grid-template-columns: 1fr;
+        grid-gap: 1.2rem;
+    }    
+}

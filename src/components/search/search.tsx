@@ -1,6 +1,6 @@
 import { CiSearch } from "react-icons/ci";
 
-import "./search.css"
+import "./Search.css"
 export const Search = () => {
     return(
         <div className="join-search">

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 
 import "./index.css"
-import  {Search}  from "../../components/search/search"
+import  {Search}  from "../../components/search/Search"
 import { Hamburger } from "../../components/hamburger/Hamburger"
 export const Layout = () => {
     function closed(){
@@ -10,7 +10,7 @@ export const Layout = () => {
     }
     return (
         <>
-        <header id='nav' className="nav">
+        <header id='header-nav' className="header-nav">
         <h1 id='nav-h1'> <a href="/"  className="">Hizus</a> </h1>
             {/* <Hamburger  onClick={()=> closed} isInitiallyOpen={true} ></Hamburger > */}
             <div className="search">

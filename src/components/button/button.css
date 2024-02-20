@@ -1,16 +1,16 @@
-
 .button-price{
     border: none;
     margin: 1rem auto;
     display: block;
     width: calc(100% - 20%);
+    border-radius: .3rem;
 }
 
 .button-price-link {
-    border-radius: .3rem;
+   
     background-color: #2ea742;
     display: block;
-
+    border-radius: .3rem;
     color:rgb(60, 60, 60);
     text-transform: uppercase;
     text-decoration: none;
