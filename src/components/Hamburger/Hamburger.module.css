@@ -1,0 +1,66 @@
+/* `bg-black block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
+    isOpen ? 'rotate-[-45deg]' : 'rotate-0'
+    w-8 h-8 flex justify-around flex-col flex-wrap z-10 cursor-pointer
+    */
+.button {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 10;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+}
+.line{
+    border-radius: 4px;
+    background-color: black;
+    display: block;
+    width: 2rem;
+    height: .35rem;
+    transform-origin: 1px;
+
+    transition: all;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 10ms;
+}
+
+.rotate-0{
+    rotate: 0;
+    
+}
+.rotate45deg{
+    rotate: 45deg;
+}
+
+
+
+.rotate-45deg{
+    rotate: -45deg;
+}
+
+.bg-transparent-translateX{
+    background-color: transparent;
+    transform: translateX(100%);
+    
+}
+.translate-0{
+    transform: translateX(0px);
+}
+
+.test{
+   
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+}
+
+.list{
+    list-style: none;
+}
+.null{
+    display: none;
+}

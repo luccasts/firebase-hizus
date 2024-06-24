@@ -1,0 +1,55 @@
+:root {
+  font-size: 62.5%;
+
+
+
+  /*Home / Card*/
+  --color-text:#5A636A;
+
+  /*SEARCH */
+  --color-bg-search:transparent;
+  --color-border-search:#fff;
+  --color-text--search:#cdcdcd;
+
+
+  /*NAV*/
+  --color-text-nav:#fff;
+  --color-bg-nav:#6a6a6a;
+
+  /*HOME*/
+  --color-bg-shadow-home:#2d2d2d;
+  --color-bg-home:#565656;
+
+  /*CARD*/
+  --color-bg-shadow-card:#000000;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--color-text);
+    background-color:var(--color-bg-home);
+    
+}
+
+nav ul {
+  list-style: none;
+}
+nav ul li a{
+  text-decoration: none;
+  color:  var(--color-text);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
