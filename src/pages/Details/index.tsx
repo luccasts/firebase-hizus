@@ -5,11 +5,11 @@ import { doc, getDoc } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { DetailsCard } from "./DetailsCard/DetailsCard"
 import { NavBack } from "../../components/NavBack"
-
+import './Details.css'
 
 
 export const Details = () => {
-    const {id} = useParams()
+    const { id } = useParams()
 
     const getProduto = doc(firestore, `produtos/${id}`)
 
@@ -20,36 +20,38 @@ export const Details = () => {
         const fetchProdutoData = async () => {
             setIsLoading(true)
             const docSnap = await getDoc(getProduto)
-            if(docSnap.exists()){
+            if (docSnap.exists()) {
                 const newProduto = {
-                    id:docSnap.id,
+                    id: docSnap.id,
                     ...docSnap.data(),
                 }
                 setProduto(newProduto)
                 setIsLoading(false)
-            }else {
+            } else {
                 console.log("Não existe este documento!")
             }
         }
         fetchProdutoData()
-    },[])
+    }, [])
 
 
-    if(isLoading) return <div className="loading-div"> <span className="loading"></span></div>
+    if (isLoading) return <div className="loading-div"> <span className="loading"></span></div>
     return (
-     <>
-        {Object.keys(produto) && Object.keys(produto).length ? (
-            <> 
-                <main className="wrapper">
-                    <NavBack />
-                    <DetailsCard  produto={produto}/>
-                </main>
-                <Footer />
-            </>
-        ) : null}
-    
-    </>  
-        
-    
+        <>
+            {Object.keys(produto) && Object.keys(produto).length ? (
+                <>
+                    <main className="wrapper">
+                        <section className="section_details">
+                            <NavBack />
+                            <DetailsCard produto={produto} />
+                        </section>
+                    </main>
+                    <Footer />
+                </>
+            ) : null}
+
+        </>
+
+
     )
 } 

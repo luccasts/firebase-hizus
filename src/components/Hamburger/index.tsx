@@ -1,20 +1,18 @@
 import { useState } from 'react';
-import styles from  './Hamburger.module.css';
+import './Hamburger.css';
 
 export interface HamburgerProps {
     onClick: () => void;
 
-    isInitiallyOpen?: boolean;
 }
 
 
 export function Hamburger(props: HamburgerProps) {
-    const { onClick, isInitiallyOpen } = props;
-    const [isOpen, setOpen] = useState<boolean>(isInitiallyOpen ?? false);
-
+    const { onClick } = props;
+    const [isOpen, setOpen] = useState<boolean>(false);
     const handleClick = () => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        setOpen((prev:any) => !prev);
+    
+        setOpen((prev:boolean) => !prev);
         onClick();
 
     };
@@ -22,7 +20,7 @@ export function Hamburger(props: HamburgerProps) {
         <button
             onClick={handleClick}
             type="button"
-            className={styles.button}
+            className="button"
         >
             <div
                 className={`line ${
@@ -39,8 +37,8 @@ export function Hamburger(props: HamburgerProps) {
                     isOpen ? 'rotate-45deg' : 'rotate-0'
                 }`}
             /> 
-            <div className={`${isOpen ? 'test' : 'null'}`} >
-                ${isOpen ?  (
+            <div onMouseLeave={() => setOpen(false)} className={`${isOpen ? 'test' : 'null'}`} >
+                {isOpen ?  (
                     <>
                 <ul className="list">
                     <li><a href="/">Periféricos</a></li>

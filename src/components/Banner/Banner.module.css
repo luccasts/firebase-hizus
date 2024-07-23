@@ -1,4 +1,4 @@
-.mainbanner {
+.mainBanner {
     max-width: 128rem;
     max-height:38rem; 
 
@@ -9,7 +9,7 @@
     border-radius: 1rem 2rem 1rem 2rem;
   
 }
-.main-banner > img{
+.mainBanner > img{
     width: 100%;
     height: 100%;
     
@@ -17,8 +17,10 @@
 }
 
 @media (min-aspect-ratio: 16/9) {
-    .main-banner > img{
+    .mainBanner > img{
         height:100% ;
+        position: relative;
+
         
     }
 }

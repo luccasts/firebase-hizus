@@ -7,3 +7,7 @@ export interface IProdutos {
     discountValue?:string
     id?:string
 }
+
+export interface IProdutosData {
+    data: string
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import { IProdutos } from "../../../types/produtos"
 import { Button } from "../../../components/Button"
 import "./DetailsCard.css"
+import { discount } from '../../../utils/discount'
 interface IProps {
     produto:IProdutos
 }
@@ -10,9 +11,9 @@ export const DetailsCard = ({produto}:IProps) => {
     const id = produto.id
     const title = produto.title?.slice(0,150)
     const value = produto.value
-    const discountValue = produto.discountValue
+    const discountValue = discount(value)
     const imgMain = produto.imgMain
-   
+
     return (
         
         <section id="section-details" className="section">

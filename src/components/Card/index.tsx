@@ -1,26 +1,13 @@
 import "./Card.css"
-import { useEffect, useState } from "react"
-import { produtosCollection } from "../../lib/controller"
-import { DocumentData, QuerySnapshot, onSnapshot } from "firebase/firestore"
-import { IProdutos } from "../../types/produtos"
 import Information from "../Information"
+
+import { useContext } from "react"
+import { ProductsContext } from "../../context/Products"
+
 
 
 export const Card = () => {
-    const [produtos, setProdutos] = useState<IProdutos[]>([])
-    useEffect(() => onSnapshot(produtosCollection,
-        (snapshot: QuerySnapshot<DocumentData, DocumentData>) => {
-            setProdutos(
-                snapshot.docs.map((doc) => {
-                    return {
-                        id: doc.id,
-                        ...doc.data()
-                    }
-                })
-            );
-        }),
-        []
-    )
+    const { produtos } = useContext(ProductsContext);
     return (
         <>
             <div>

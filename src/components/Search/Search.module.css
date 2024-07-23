@@ -1,20 +1,25 @@
-.join-search{
+.containerSearch{
+    display: flex;
+}
+.joinSearch{
     width: 100%;
     max-width: 100%;
     position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
 
 }
-#Search{
+.Search{
     max-width: 700px;
+    border-radius: 1rem 1rem 0 0;
 }   
-.button-search{
+.buttonSearch{
     display: flex;
-    background-color: rgb(53, 53, 53);
-    color: white;
-    width: 32px;    
-    height: 32px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 38, 255);
+    width: 38px;    
+    height: 38px;
     justify-content: center;
     align-items: center;
     border-radius: 0 1rem 1rem 0;
@@ -23,9 +28,9 @@
 } 
 
 
-.input-search{
-    width: calc(100% - 20%);
-    
+.inputSearch{
+    width: 50%;
+    height: 32px;
     border-radius: 1rem 0 0 1rem;
     padding: .5rem;
     background-color: var(--color-bg-search);
@@ -33,11 +38,26 @@
     border: 1px solid var(--color-border-search);
     
 }
-
+.joinSearch input {
+    color: #f4f4f4;
+    padding:18px;
+    font-weight: 600;
+    line-height: 24px;
+}
 .input-search::placeholder{
-    color: var(--color-text--search);
+    color:chartreuse;
     font-weight: 400;
     padding-left: 1rem;
+}
+input::-webkit-input-placeholder{
+
+    color:var(--color-text--search);
+    font-family: "Source Sans 3";
+    letter-spacing: 0.5px;
+    padding-left: 0.5rem;
+}
+.input[type="search" i] div{
+    color: brown;
 }
 
 input[type="search" i]:focus::placeholder{
