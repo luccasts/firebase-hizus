@@ -1,8 +1,10 @@
 import styles from './Login.module.css'
 import Form from '../../components/Form';
-import LoginProvider from '../../context/Login';
+import FormProvider from '../../context/Form';
+
 
 const Login = () => {
+    
     return (
         <>
             <header>
@@ -12,9 +14,9 @@ const Login = () => {
                 <section>
                     Hizus
                 </section>
-                <LoginProvider>
+                <FormProvider>
                     <Form />
-                </LoginProvider>
+                </FormProvider>
             </main>
             <footer>
                 Footer

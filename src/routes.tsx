@@ -6,9 +6,10 @@ import { NotFound } from './pages/NotFound';
 import { Details } from './pages/Details';
 import Peripherals from "./pages/Peripherals";
 import Hardware from "./pages/Hardware";
-import Test from "./components/Search/test";
+
 import SearchPage from "./pages/Search";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function AppRoutes() {
   return (
@@ -21,6 +22,7 @@ function AppRoutes() {
           <Route path="/hardware" element={<Hardware />} />
           <Route path="/busca/:search" element={<SearchPage />}/>
         </Route>
+        <Route path="/cadastrar" element={<Register/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>

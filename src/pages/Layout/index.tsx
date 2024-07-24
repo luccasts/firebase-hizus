@@ -4,13 +4,13 @@ import "./index.css"
 
 import ProductsProvider from "../../context/Products"
 import Nav from "../../components/Nav"
-import LoginProvider from "../../context/Login"
+import FormProvider from "../../context/Form"
 
 export const Layout = () => {
 
     
     return (
-        <LoginProvider>
+        <FormProvider>
 
 
             <ProductsProvider>
@@ -19,6 +19,6 @@ export const Layout = () => {
                 <Outlet />
 
             </ProductsProvider>
-        </LoginProvider>
+        </FormProvider>
     )
 }

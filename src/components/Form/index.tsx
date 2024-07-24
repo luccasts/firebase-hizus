@@ -1,20 +1,14 @@
 import { useContext, useState } from "react"
-import { LoginContext } from "../../context/Login"
-import users from '../../mocks/users.json'
 import { AiFillEye, AiTwotoneEye } from "react-icons/ai"
-import { useNavigate } from "react-router-dom"
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { FormContext } from "../../context/Form"
+import useFormContext from "../../hooks/useFormContext"
+import { Link } from "react-router-dom"
+
+
 const Form = () => {
-
-
-
-    
     const [hidden, setHidden] = useState('password')
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-
-    const { login, setLogin } = useContext(LoginContext)
-
+    const { handleEmail, handlePassword, handleLogin, handleRegister } = useFormContext()
+    const { password, email } = useContext(FormContext)
     function HandleHidden() {
         return hidden === "password" ? 'text' : 'password'
     }
@@ -38,42 +32,61 @@ const Form = () => {
     //     localStorage.removeItem('login')
     // }
 
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            console.log(user)
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode , errorMessage)
-        });
-    function HandleUserLogin (e) {
+
+
+
+
+
+    function handleUserLogin(e) {
+        location.pathname === 'login' ? '' : '';
         e.preventDefault()
+        handleLogin(email, password)
+
     }
+
+    function handleUserRegister(e) {
+        e.preventDefault()
+        handleRegister(email,password)
+ 
+    }
+
     return (
         <form action="" method="post">
             <label htmlFor='email'>
                 E-mail
-                <input value={email} onChange={(v) => setEmail(v.target.value)} id='email' placeholder="Digite o e-mail" type="text" />
+                <input value={email} onChange={(v) => handleEmail(v.target.value)} id='email' placeholder="Digite o e-mail" type="text" />
 
             </label>
             <label htmlFor='password'>
                 Senha
-                <input value={password} onChange={(v) => setPassword(v.target.value)} id='password' placeholder='Digite o sua senha' type={hidden} />
+                <input value={password} onChange={(v) => handlePassword(v.target.value)} id='password' placeholder='Digite o sua senha' type={hidden} />
                 <button className='buttonHidden' type='button' onClick={() => setHidden(HandleHidden)}>
                     {hidden === 'password' ? <AiTwotoneEye /> : <AiFillEye />}
 
                 </button>
             </label>
-            <button onClick={(e) => HandleUserLogin(e)}>
-                Logar-se
-            </button>
-            <button onClick={(e) => HandleLogout(e)}>
-                Deslogar
-            </button>
+
+            {
+                location.pathname === '/login'
+                    ?
+                    <button onClick={(e) => handleUserLogin(e)}> Logar-se</button>
+                    :
+                    <button onClick={(e) => handleUserRegister(e)} > Registar-se</button>
+            }
+
+            {
+                location.pathname === '/login'
+                    ?
+                    <button>
+                        <Link to='/cadastrar'>Cadastrar-se</Link>
+                    </button>
+                    :
+                    <button>
+                        <Link to='/login'> Fazer login</Link>
+                    </button>
+
+            }
+
         </form>
     )
 }
