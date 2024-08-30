@@ -15,8 +15,8 @@
 
   /*NAV*/
   --color-text-nav:#f7f7f7;
-  --color-bg-nav:#2c7feb;
-
+  --color-bg-nav-light:rgba(44,127,235,1);
+  --color-bg-nav-dark:rgba(22,85,194,1);
   /*HOME*/
   --color-bg-shadow-home:#000000;
   --color-bg-home:#1675c2;
@@ -55,4 +55,8 @@ nav ul li a{
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main{
+  height: 100vh;
 }

@@ -8,7 +8,7 @@ import { Hamburger } from "../Hamburger"
 import { useState } from "react"
 
 
-const Nav = ({handleSearch}) => {
+const Nav = () => {
  
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [open, setOpen] = useState(false)

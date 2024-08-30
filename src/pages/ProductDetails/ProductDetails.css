@@ -1,7 +1,11 @@
+
+
 .section_details{
     background-color: aliceblue;
     width: 80%;
     margin: auto;
     padding: 3rem;
     border-radius: 2rem 2rem 1rem 1rem;
+    margin-bottom: 1rem;
 }
+

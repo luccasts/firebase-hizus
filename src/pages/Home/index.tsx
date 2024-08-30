@@ -1,24 +1,18 @@
-
-import { getAuth } from "firebase/auth";
 import { Banner } from "../../components/Banner";
-import { Card } from "../../components/Card";
-import { Footer } from "../../components/Footer";
+import ProductList from "../../components/ProductList";
 
 import "./index.css"
 
 export const Home = () => {
-    
+
     return (
         <>
             <Banner />
-        <main className="wrapper">
-            <Card/>
-
-        </main>
-        <Footer />
-            
+            <main className="wrapper">
+                <ProductList />
+            </main>
         </>
     );
- 
+
 
 }

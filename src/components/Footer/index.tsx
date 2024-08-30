@@ -3,8 +3,8 @@ import styles from "./Footer.module.css"
 
 export const Footer = () => {
     return (
-        <footer className={`${styles.FooterBackgroundColor}${styles.footerGrid} `}>
-            <nav className="footer-nav">
+        <footer className={`${styles.FooterBackgroundColor} ${styles.footerGrid} `}>
+            <nav className={styles.footerNav}>
                 <div>
                     <h1><Link to={"/"}></Link>Hizus</h1>
                 </div>

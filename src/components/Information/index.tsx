@@ -1,4 +1,4 @@
-import "../Card/Card.css"
+import "./Information.css"
 import {AiOutlineShoppingCart }    from 'react-icons/ai'
 import {Button} from "../Button"
 import { IProdutos } from "../../types/produtos"
@@ -8,18 +8,15 @@ interface IProps {
     produto:IProdutos
 }
 
-function Information({produto}:IProps) {
+function ProductInformation({produto}:IProps) {
     const id = produto.id
-    const title = produto.title?.slice(0,150)
+    const title = produto.title?.slice(0,120)
     const value = produto.value
     const discountValue = discount(value)
     
     const imgMain = produto.imgMain
    
     return (
-        
-        <section className="section-list">
-            <ul className="ul-list">
                 <li className="ul-list-li">
                     <img src={imgMain} alt={ "imagem " + title} />
                     <section className="ul-list-section" >
@@ -36,10 +33,7 @@ function Information({produto}:IProps) {
                         </Button>
                     </section>
                 </li>
-
-            </ul>
-        </section>
     )
 }
 
-export default Information
+export default ProductInformation;

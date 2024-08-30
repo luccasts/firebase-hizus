@@ -1,4 +1,4 @@
-import { Card } from "../../components/Card";
+import ProductList from "../../components/ProductList";
 
     const perifericos = [
         "mouse",
@@ -11,9 +11,9 @@ import { Card } from "../../components/Card";
 
 const Peripherals = () => {
     return(
-         <div>
-            <Card ></Card>
-        </div>
+         <main>
+            <ProductList />
+        </main>
        
     )
 }

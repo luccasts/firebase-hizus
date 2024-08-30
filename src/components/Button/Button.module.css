@@ -1,12 +1,13 @@
-.button-price{
+.button{
     border: none;
     margin: 1rem auto;
     display: block;
     width: calc(100% - 20%);
     border-radius: .3rem;
+
 }
 
-.button-price-link {
+.button_link {
    
     background-color: #2ea742;
     display: block;
@@ -16,15 +17,13 @@
     text-decoration: none;
     padding: 1rem;
     font-size: 1.1rem;
-    
-
-
     letter-spacing: .09rem;
-  
+
 }
 
 
-.button-price-link:hover  {
+
+.button_link:hover  {
     background-color:#36d550;
     color: white;
 }

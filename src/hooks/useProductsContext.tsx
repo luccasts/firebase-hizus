@@ -34,10 +34,6 @@ const useProductsContext = () => {
 
     }
 
-    
-
-
-
     return {
         handleSearchProducts,
     }

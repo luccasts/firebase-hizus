@@ -1,6 +1,7 @@
 import styles from './Login.module.css'
 import Form from '../../components/Form';
 import FormProvider from '../../context/Form';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -12,7 +13,7 @@ const Login = () => {
             </header>
             <main className={styles.main}>
                 <section>
-                    Hizus
+                    <Link to="/">Hizus</Link> 
                 </section>
                 <FormProvider>
                     <Form />

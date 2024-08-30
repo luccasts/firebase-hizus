@@ -4,6 +4,7 @@
 
     background-color: black;
     padding: 50px;
+
 }
 
 .footerGrid{
@@ -16,6 +17,24 @@
 .footerGrid ul li a:hover{
   text-decoration: underline;
 
+}
+
+.footerNav{
+  display: flex;
+  justify-content:space-around;
+  align-items: first baseline;
+  gap: 32px;
+  
+}
+
+.footerNav h1 {
+  color: white;
+}
+.footerNav a , .footerNav h3  {
+  color:rgb(127, 127, 127);
+}
+.footerNav h1:hover, .footerNav a:hover   {
+    cursor: pointer;
 }
 /* .footer-grid{
     

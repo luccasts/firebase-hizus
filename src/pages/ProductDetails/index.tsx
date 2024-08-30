@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom"
-import { Footer } from "../../components/Footer"
 import { firestore } from "../../lib/controller"
 import { doc, getDoc } from "firebase/firestore"
 import { useEffect, useState } from "react"
-import { DetailsCard } from "./DetailsCard/DetailsCard"
+import styles from "./ProductsDetails.module.css"
 import { NavBack } from "../../components/NavBack"
-import './Details.css'
+import './ProductDetails.css'
+import CardDescrition from "./CardDescription"
+import CardDetails from "./CardDetails/CardDetails"
 
 
 export const Details = () => {
@@ -43,10 +44,13 @@ export const Details = () => {
                     <main className="wrapper">
                         <section className="section_details">
                             <NavBack />
-                            <DetailsCard produto={produto} />
+                            <CardDetails produto={produto} />
+                        </section>
+                        <section className="section_details">
+                            <CardDescrition  produto={produto}/>   
                         </section>
                     </main>
-                    <Footer />
+
                 </>
             ) : null}
 

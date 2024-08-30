@@ -42,7 +42,7 @@ const useFormContext = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                console.log(user)
+                console.log(auth)
                 // ...
             })
             .catch((error) => {
@@ -51,7 +51,7 @@ const useFormContext = () => {
                 console.log(errorCode, errorMessage)
                 // ..
             });
-            console.log('formulário')
+            
     }
 
 

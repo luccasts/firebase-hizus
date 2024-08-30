@@ -1,5 +1,5 @@
 .header-nav{
-    background-color:  var(--color-bg-nav);
+    background: radial-gradient(circle, var(--color-bg-nav-light) 40%, var(--color-bg-nav-dark) 100%);
     box-shadow: 0 .5px 2px var(--color-bg-shadow-home);
     padding: 3rem 2rem .5rem 2rem;
     margin-bottom: 3.2rem;

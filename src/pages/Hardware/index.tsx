@@ -1,5 +1,9 @@
 const Hardware = () => {
-    return "hardwarte"
+    return (
+        <main>
+            hardware
+        </main>
+    )
 }
 
 export default Hardware;
