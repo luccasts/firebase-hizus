@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { firestore } from "../../lib/controller"
 import { doc, getDoc } from "firebase/firestore"
 import { useEffect, useState } from "react"
-import { NavBack } from "../../components/Navback"
+import { NavBack } from "../../components/NavBack"
 import './ProductDetails.css'
 import CardDescrition from "./CardDescription"
 import CardDetails from "./CardDetails/CardDetails"
@@ -42,7 +42,7 @@ export const Details = () => {
                 <>
                     <main className="wrapper">
                         <section className="section_details">
-                            <NavBack />
+                            <NavBack/>
                             <CardDetails produto={produto} />
                         </section>
                         <section className="section_details">
