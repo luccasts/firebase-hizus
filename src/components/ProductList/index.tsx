@@ -6,6 +6,8 @@ import { ProductsContext } from "../../context/Products"
 import { IProdutos } from "../../types/produtos"
 
 interface IProducts {
+    map(arg0: (produto: IProdutos) => import("react/jsx-runtime").JSX.Element): import("react").ReactNode
+    length: IProducts
     produtos: IProducts
 }
 
