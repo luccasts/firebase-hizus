@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 const Form = () => {
     const [hidden, setHidden] = useState('password')
     const { handleEmail, handlePassword, handleLogin, handleRegister } = useFormContext()
-    const { password, email } = useContext(FormContext)
+    const { password, email }:any = useContext(FormContext)
     function HandleHidden() {
         return hidden === "password" ? 'text' : 'password'
     }
@@ -37,14 +37,14 @@ const Form = () => {
 
 
 
-    function handleUserLogin(e) {
+    function handleUserLogin(e:any) {
         location.pathname === 'login' ? '' : '';
         e.preventDefault()
         handleLogin(email, password)
 
     }
 
-    function handleUserRegister(e) {
+    function handleUserRegister(e:any) {
         e.preventDefault()
         handleRegister(email,password)
  

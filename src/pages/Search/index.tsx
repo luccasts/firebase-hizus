@@ -1,7 +1,8 @@
 import useProductsContext from "../../hooks/useProductsContext";
 import { useLocation} from "react-router-dom";
-import Information from "../../components/Information";
+
 import { IProdutos } from "../../types/produtos";
+import ProductInformation from "../../components/Information";
 
 const SearchPage = () => {
     const {pathname} = useLocation() 
@@ -11,7 +12,7 @@ const SearchPage = () => {
 
     return (
         <main>
-            {productsSearch && <div> {productsSearch.map((t: IProdutos) => <Information key={t.id} produto={t} />)} </div>}
+            {productsSearch && <div> {productsSearch.map((t: IProdutos) => <ProductInformation key={t.id} produto={t} />)} </div>}
         </main>
     )
 }

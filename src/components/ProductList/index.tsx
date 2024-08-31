@@ -5,9 +5,12 @@ import { useContext } from "react"
 import { ProductsContext } from "../../context/Products"
 import { IProdutos } from "../../types/produtos"
 
+interface IProducts {
+    produtos: IProducts
+}
 
 const ProductList = () => {
-    const { produtos }:IProdutos  = useContext(ProductsContext);
+    const { produtos }:IProducts  = useContext(ProductsContext);
     return (
         <>
             <div className={styles.section_list}>

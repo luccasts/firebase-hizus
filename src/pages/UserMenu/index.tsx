@@ -6,12 +6,10 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const UserMenu = () => {
     const auth = getAuth();
-    const [email, setEmail]:string | null = useState("")
+    const [userEmail, setUserEmail]:any = useState("")
     onAuthStateChanged(auth, (user) => {
         if(user){
-            const uid = user.uid;
-            
-            setEmail(user.email)
+            setUserEmail(user.email)
             
 
         }else{
@@ -23,7 +21,7 @@ const UserMenu = () => {
     return (
         <main>
             <h1>User menu</h1>
-            <p>user email ={email}
+            <p>user email ={userEmail}
                 </p>
         </main>
     )

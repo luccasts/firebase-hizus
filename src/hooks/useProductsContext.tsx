@@ -21,14 +21,14 @@ import { ProductsContext } from "../context/Products"
 // }
 
 const useProductsContext = () => {
-    const { produtos } = useContext(ProductsContext)
+    const { produtos }:any = useContext(ProductsContext)
     
 
  
 
     function handleSearchProducts(v: string) {
         if (produtos) {
-            const filteredProducts  = produtos.filter((p) => p.title.toLocaleLowerCase().indexOf(v.toLocaleLowerCase()) > -1)
+            const filteredProducts  = produtos.filter((p: { title: string }) => p.title.toLocaleLowerCase().indexOf(v.toLocaleLowerCase()) > -1)
             return filteredProducts
         }
 

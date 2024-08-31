@@ -1,4 +1,3 @@
-import React from 'react'
 import { IProdutos } from "../../../types/produtos";
 import { Button } from "../../../components/Button";
 import "./CardDetails.css";

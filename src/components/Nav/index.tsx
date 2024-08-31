@@ -11,7 +11,7 @@ import { useState } from "react"
 const Nav = () => {
  
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [open, setOpen] = useState(false)
+    const [ , setOpen] = useState(false)
 
     return (
         <header id='header-nav' className="header-nav">

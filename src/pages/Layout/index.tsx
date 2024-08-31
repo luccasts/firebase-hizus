@@ -14,7 +14,7 @@ export const Layout = () => {
 
 
             <ProductsProvider>
-            <Nav handleSearch={undefined}/>
+            <Nav/>
             
                 <Outlet />
 

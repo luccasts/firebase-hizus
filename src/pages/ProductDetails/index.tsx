@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom"
 import { firestore } from "../../lib/controller"
 import { doc, getDoc } from "firebase/firestore"
 import { useEffect, useState } from "react"
-import styles from "./ProductsDetails.module.css"
 import { NavBack } from "../../components/Navback"
 import './ProductDetails.css'
 import CardDescrition from "./CardDescription"

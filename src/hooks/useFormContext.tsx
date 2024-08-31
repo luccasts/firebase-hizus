@@ -4,7 +4,7 @@ import { FormContext } from "../context/Form"
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth"
 
 const useFormContext = () => {
-    const { setEmail, setPassword, password, email } = useContext(FormContext)
+    const { setEmail, setPassword}:any = useContext(FormContext)
 
 
 
@@ -42,7 +42,7 @@ const useFormContext = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                console.log(auth)
+                console.log(user)
                 // ...
             })
             .catch((error) => {

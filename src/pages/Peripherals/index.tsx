@@ -1,11 +1,6 @@
 import ProductList from "../../components/ProductList";
 
-    const perifericos = [
-        "mouse",
-        "headset",
-        "microfone",    
-        "teclado"
-    ]
+    
 
 
 
