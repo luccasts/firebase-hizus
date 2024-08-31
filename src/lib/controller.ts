@@ -5,4 +5,4 @@ export const firestore = getFirestore(app)
 
 //PRODUTOS OCLLECTION
 
-export const produtosCollection =  collection(firestore, "produtos")
+export const produtosCollection = collection(firestore, 'produtos');

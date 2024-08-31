@@ -1,0 +1,91 @@
+/* `bg-black block w-8 h-[0.35rem] rounded transition-all origin-[1px] ${
+    isOpen ? 'rotate-[-45deg]' : 'rotate-0'
+    w-8 h-8 flex justify-around flex-col flex-wrap z-10 cursor-pointer
+    */
+.button {
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 10;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    display: none;
+}
+.line{
+    
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    width: 19px;
+    height: 3px;
+    transform-origin: 0px;
+
+    transition: all;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 10ms;
+}
+
+.rotate-0{
+    
+    rotate: 0;
+    
+}
+.rotate45deg{
+    rotate: 45deg;
+    background-color: black;
+}
+
+
+
+.rotate-45deg{
+    rotate: -45deg;
+    background-color: black;
+}
+
+.bg-transparent-translateX{
+    
+    background-color: transparent;
+    transform: translateX(100%);
+    
+}
+.translate-0{
+   
+    transform: translateX(0px);
+}
+
+.test{
+
+    background-color: rgb(255, 255, 255);
+}
+
+.list{
+
+    list-style: none;
+}
+.null{
+    display: none;
+}
+
+.list a {
+    color: black;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+@media screen and (max-width: 768px){
+    .button{
+        display: flex;
+      
+    }
+}
