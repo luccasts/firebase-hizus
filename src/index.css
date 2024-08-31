@@ -1,25 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 :root {
   font-size: 62.5%;
 
 
 
   /*Home / Card*/
-  --color-text:#5A636A;
+  --color-text:#111111;
 
   /*SEARCH */
   --color-bg-search:transparent;
   --color-border-search:#fff;
-  --color-text--search:#cdcdcd;
+  --color-text--search:#fafafa;
 
 
   /*NAV*/
-  --color-text-nav:#fff;
-  --color-bg-nav:#6a6a6a;
-
+  --color-text-nav:#f7f7f7;
+  --color-bg-nav-light:rgba(44,127,235,1);
+  --color-bg-nav-dark:rgba(22,85,194,1);
   /*HOME*/
-  --color-bg-shadow-home:#2d2d2d;
-  --color-bg-home:#565656;
-
+  --color-bg-shadow-home:#000000;
+  --color-bg-home:#1675c2;
+  --color-bg-homeDark: #0e388a;
   /*CARD*/
   --color-bg-shadow-card:#000000;
 }
@@ -31,13 +32,15 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    font-family: "Source Sans 3",
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--color-text);
-    background-color:var(--color-bg-home);
+    background: rgb(22,85,194);
+
+    background:linear-gradient(180deg, var(--color-bg-home) 0%,  var(--color-bg-homeDark) 100%);
+    /* background-color:var(--color-bg-home); */
     
 }
 
@@ -52,4 +55,8 @@ nav ul li a{
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main{
+  height: 100vh;
 }

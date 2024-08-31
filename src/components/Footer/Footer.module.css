@@ -1,0 +1,49 @@
+.FooterBackgroundColor{
+    width: 100%;
+    position:absolute;
+
+    background-color: black;
+    padding: 50px;
+
+}
+
+.footerGrid{
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+  
+}
+
+.footerGrid ul li a:hover{
+  text-decoration: underline;
+
+}
+
+.footerNav{
+  display: flex;
+  justify-content:space-around;
+  align-items: first baseline;
+  gap: 32px;
+  
+}
+
+.footerNav h1 {
+  color: white;
+}
+.footerNav a , .footerNav h3  {
+  color:rgb(127, 127, 127);
+}
+.footerNav h1:hover, .footerNav a:hover   {
+    cursor: pointer;
+}
+/* .footer-grid{
+    
+    
+}
+
+.footer-nav-center{
+    width: calc(100% - 20%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */

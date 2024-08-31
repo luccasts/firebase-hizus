@@ -1,30 +1,25 @@
 import { Outlet } from "react-router-dom"
 
 import "./index.css"
-import  {Search}  from "../../components/search/Search"
-import { Hamburger } from "../../components/hamburger/Hamburger"
-export const Layout = () => {
-    function closed(){
-        <Hamburger  onClick={()=> closed} isInitiallyOpen={false} />
 
-    }
+import ProductsProvider from "../../context/Products"
+import Nav from "../../components/Nav"
+import FormProvider from "../../context/Form"
+import { Footer } from "../../components/Footer"
+export const Layout = () => {
+
+    
     return (
-        <>
-        <header id='header-nav' className="header-nav">
-        <h1 id='nav-h1'> <a href="/"  className="">Hizus</a> </h1>
-            {/* <Hamburger  onClick={()=> closed} isInitiallyOpen={true} ></Hamburger > */}
-            <div className="search">
-                <Search></Search>
-            </div>
-            <nav onClick={closed} className="nav-primary">
-                <ul className="nav-ul">
-                    <li className="nav-li"><a href="/">Periféricos</a></li>
-                    <li className="nav-li"><a href="/">Hardware</a></li>
-                </ul>
-               
-            </nav>
-        </header>
-                    <Outlet />
-        </>
+        <FormProvider>
+
+
+            <ProductsProvider>
+            <Nav handleSearch={undefined}/>
+            
+                <Outlet />
+
+            </ProductsProvider>
+            <Footer />
+        </FormProvider>
     )
 }
