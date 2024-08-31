@@ -18,9 +18,9 @@ const Nav = () => {
             <div className="search">
                 <Search></Search>
             </div>
+            <Hamburger onClick={() => closed} ></Hamburger >
             <nav className="nav-primary">
                 <ul className="nav-ul">
-                    <Hamburger onClick={() => closed} ></Hamburger >
                     <li className="nav-li" onMouseEnter={() => setOpen(true)}><Link to="/perifericos">Periféricos
                     </Link>
                     </li>
