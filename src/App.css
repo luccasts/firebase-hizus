@@ -23,3 +23,9 @@
         transform: rotate(360deg);
     }
 } 
+
+.wrapper {
+    min-height: calc(100vh - 50px);
+    position: relative;
+    margin: 1rem 1rem;
+  }
