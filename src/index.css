@@ -1,30 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
 :root {
   font-size: 62.5%;
-
 
   /*Home / Card*/
   --color-text: #111111;
 
   /*SEARCH */
-  --color-bg-search: transparent;
+  --color-bg-search: #fafafa;
   --color-border-search: #fff;
-  --color-text--search: #fafafa;
-
+  --color-text-search: #4f4f4f;
+  --color-text-search-type: #4f4f4f;
 
   /*NAV*/
   --color-text-nav: #f7f7f7;
-  --color-bg-nav-light: rgba(44, 127, 235, 1);
-  --color-bg-nav-dark: rgba(22, 85, 194, 1);
+  --color-bg-nav-light: rgb(31, 31, 31);
+  --color-bg-nav-dark: rgb(26, 26, 26);
+  --color-bg-nav-hover: rgb(139, 30, 222);
+
   /*HOME*/
   --color-bg-shadow-home: #000000;
   --color-bg-home: #1675c2;
   --color-bg-homeDark: #0e388a;
   /*CARD*/
   --color-bg-shadow-card: #000000;
-}
 
+  /*FOOTER*/
+  --color-bg-footer: rgb(26, 26, 26);
+
+  /*purple*/
+  --color-purple: rgb(139, 30, 222);
+}
 
 * {
   margin: 0;
@@ -33,16 +39,11 @@
 }
 
 body {
-  font-family: "Source Sans 3",
-    sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-text);
-  background: rgb(22, 85, 194);
-
-  background: linear-gradient(180deg, var(--color-bg-home) 0%, var(--color-bg-homeDark) 100%);
-
-  
+  background: rgb(232, 240, 255);
 }
 
 nav ul {
@@ -54,3 +55,6 @@ nav ul li a {
   color: var(--color-text);
 }
 
+main {
+  height: 100vh;
+}
