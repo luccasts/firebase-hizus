@@ -35,7 +35,7 @@ export const Search = () => {
         </button>
       </form>
       <Link to={"/login"}>
-        <AiOutlineUser className="header-user-img" />
+        <AiOutlineUser className={styles.header_user_img} />
       </Link>
     </div>
   );

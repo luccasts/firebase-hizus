@@ -8,7 +8,7 @@ export const Home = () => {
     <>
       <Banner />
       <main className="wrapper">
-        <ProductList />
+        <ProductList title="Mais Vendidos" />
       </main>
     </>
   );

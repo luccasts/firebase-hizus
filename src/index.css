@@ -7,22 +7,30 @@
   --color-text: #111111;
 
   /*SEARCH */
-  --color-bg-search: #fafafa;
-  --color-border-search: #fff;
-  --color-text-search: #4f4f4f;
-  --color-text-search-type: #4f4f4f;
+  --color-bg-search: #1e1e1e;
+  --color-border-search: #6a0dad;
+  --color-border-search-focus: #8a2be2;
+  --color-text-search: #fff;
+  --color-text-search-type: #b3b3b3;
 
   /*NAV*/
   --color-text-nav: #f7f7f7;
-  --color-bg-nav-light: rgb(31, 31, 31);
-  --color-bg-nav-dark: rgb(26, 26, 26);
-  --color-bg-nav-hover: rgb(139, 30, 222);
+  /* --color-bg-nav-light: rgb(31, 31, 31);
+  --color-bg-nav-dark: rgb(26, 26, 26); */
+  --color-bg-nav-light: #6a0dad;
+  --color-bg-nav-dark: #6a0dad;
+  --color-bg-nav-hover: #8a2be2;
+  --color-hr-nav: #8a2be2;
+  --color-icon-user: #881ded;
 
   /*HOME*/
   --color-bg-shadow-home: #000000;
   --color-bg-home: #1675c2;
   --color-bg-homeDark: #0e388a;
+
   /*CARD*/
+  --color-bg-card: #212121;
+  --color-text-card: #fff;
   --color-bg-shadow-card: #000000;
 
   /*FOOTER*/
@@ -43,7 +51,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-text);
-  background: rgb(232, 240, 255);
+  background: #1c1c1c;
 }
 
 nav ul {
@@ -57,4 +65,10 @@ nav ul li a {
 
 main {
   height: 100vh;
+}
+.hr-purple {
+  border: none;
+  height: 2px;
+  background-color: var(--color-hr-nav);
+  margin: 8px 0;
 }

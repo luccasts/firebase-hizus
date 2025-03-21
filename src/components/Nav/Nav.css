@@ -46,11 +46,7 @@
   color: var(--color-text-nav);
   text-decoration: none;
 }
-.header-user-img {
-  width: 32px;
-  height: 32px;
-  color: white;
-}
+
 .list-open {
   display: flex;
   margin-top: 30px;

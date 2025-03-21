@@ -16,6 +16,7 @@
   text-transform: uppercase;
   color: var(--color-purple);
 }
+
 @media screen and (max-width: 450px) {
   .ul_list {
     grid-template-columns: 1fr;

@@ -18,7 +18,7 @@ const Nav = () => {
       </div>
       <Hamburger onClick={() => closed}></Hamburger>
 
-      <hr />
+      <hr className="hr-purple" />
       <nav className="nav-primary">
         <ul className="nav-ul">
           <li className="nav-li" onMouseEnter={() => setOpen(true)}>

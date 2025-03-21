@@ -13,13 +13,17 @@ interface IProducts {
   produtos: IProducts;
 }
 
-const ProductList = () => {
+interface ITitle {
+  title?: string;
+}
+
+const ProductList = ({ title }: ITitle) => {
   const { produtos }: IProducts = useContext(ProductsContext);
   return (
     <>
       <div className={styles.section_list}>
         <div>
-          <h2>Mais Vendidos</h2>
+          <h2>{title}</h2>
           <hr />
         </div>
         {produtos && produtos.length ? (
