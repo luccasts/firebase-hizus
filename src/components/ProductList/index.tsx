@@ -34,7 +34,6 @@ const ProductList = ({ title }: ITitle) => {
           </ul>
         ) : (
           <div className="loading-div">
-            {" "}
             <span className="loading"></span>
           </div>
         )}

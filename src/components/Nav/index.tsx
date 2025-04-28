@@ -15,10 +15,13 @@ const Nav = () => {
     <header id="header-nav" className="header-nav">
       <div className="search">
         <Search></Search>
-      </div>
-      <Hamburger onClick={() => closed}></Hamburger>
 
-      <hr className="hr-purple" />
+        <div className="hamburger-div">
+          <Hamburger onClick={() => closed}></Hamburger>
+        </div>
+      </div>
+
+      <hr className="hr-nav" />
       <nav className="nav-primary">
         <ul className="nav-ul">
           <li className="nav-li" onMouseEnter={() => setOpen(true)}>

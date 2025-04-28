@@ -6,6 +6,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const UserMenu = () => {
     const auth = getAuth();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [userEmail, setUserEmail]:any = useState("")
     onAuthStateChanged(auth, (user) => {
         if(user){

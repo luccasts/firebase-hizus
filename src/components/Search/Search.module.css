@@ -1,5 +1,7 @@
 .containerSearch {
   display: flex;
+  width: 1280px;
+  margin: auto;
 }
 .joinSearch {
   width: 100%;

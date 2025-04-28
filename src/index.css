@@ -5,7 +5,7 @@
 
   /*Home / Card*/
   --color-text: #111111;
-
+  --color-purple: #6a0dad;
   /*SEARCH */
   --color-bg-search: #1e1e1e;
   --color-border-search: #6a0dad;
@@ -32,6 +32,9 @@
   --color-bg-card: #212121;
   --color-text-card: #fff;
   --color-bg-shadow-card: #000000;
+
+  /*Página Produtos*/
+  --color-bg-product: #212121;
 
   /*FOOTER*/
   --color-bg-footer: rgb(26, 26, 26);
@@ -65,10 +68,4 @@ nav ul li a {
 
 main {
   height: 100vh;
-}
-.hr-purple {
-  border: none;
-  height: 2px;
-  background-color: var(--color-hr-nav);
-  margin: 8px 0;
 }

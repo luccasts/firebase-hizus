@@ -4,6 +4,7 @@ import logo from "/assets/icon/logohizus.png";
 import { Link } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { FormEvent, useState } from "react";
+import { Hamburger } from "../Hamburger";
 
 export const Search = () => {
   const handleSearch = (event: FormEvent<HTMLFormElement>) => {
@@ -17,6 +18,7 @@ export const Search = () => {
       <Link to="/">
         <img src={logo} width={40} height={40} alt="Logo do site" />
       </Link>
+      <Hamburger onClick={() => closed} />
 
       <form
         method="get"
