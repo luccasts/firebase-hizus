@@ -1,29 +1,34 @@
-.button{
-    border: none;
-    margin: 1rem auto;
-    display: block;
-    width: calc(100% - 20%);
-    border-radius: .3rem;
-
+.button {
+  border: none;
+  margin: 1rem auto;
+  display: block;
+  width: calc(100% - 20%);
+  border-radius: 0.3rem;
 }
 
 .button_link {
-   
-    background-color: #2ea742;
-    display: block;
-    border-radius: .3rem;
-    color:rgb(60, 60, 60);
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1rem;
-    font-size: 1.1rem;
-    letter-spacing: .09rem;
+  background-color: #2ea742;
+  display: block;
+  border-radius: 0.3rem;
+  color: rgb(60, 60, 60);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.09rem;
+  transition: transform 0.4s ease-out;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.button_link:hover {
+  background-color: #36d550;
+  color: white;
+  transform: scale(1.01);
+}
 
-
-.button_link:hover  {
-    background-color:#36d550;
-    color: white;
+.button_link svg {
+  font-size: 22px;
 }

@@ -1,25 +1,23 @@
 import { CiSearch } from "react-icons/ci";
 import styles from "./Search.module.css";
-import logo from "/assets/icon/logohizus.png";
-import { Link } from "react-router-dom";
-import { AiOutlineUser } from "react-icons/ai";
+
+import { useNavigate } from "react-router-dom";
+
 import { FormEvent, useState } from "react";
-import { Hamburger } from "../Hamburger";
 
 export const Search = () => {
+  const navigate = useNavigate();
+  const [valueInput, setValueInput] = useState("");
   const handleSearch = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    location.pathname = `/busca/${valueInput}`;
+
+    if (valueInput.length > 3) {
+      navigate(`/busca/${valueInput}`);
+    }
   };
-  const [valueInput, setValueInput] = useState("");
 
   return (
     <div className={styles.containerSearch}>
-      <Link to="/">
-        <img src={logo} width={40} height={40} alt="Logo do site" />
-      </Link>
-      <Hamburger onClick={() => closed} />
-
       <form
         method="get"
         onSubmit={(e) => handleSearch(e)}
@@ -36,9 +34,6 @@ export const Search = () => {
           <CiSearch className="label-search-icon" />
         </button>
       </form>
-      <Link to={"/login"}>
-        <AiOutlineUser className={styles.header_user_img} />
-      </Link>
     </div>
   );
 };

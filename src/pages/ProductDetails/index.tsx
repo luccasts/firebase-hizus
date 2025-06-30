@@ -36,7 +36,6 @@ export const Details = () => {
   if (isLoading)
     return (
       <div className="loading-div">
-        {" "}
         <span className="loading"></span>
       </div>
     );
@@ -45,13 +44,15 @@ export const Details = () => {
       {Object.keys(produto) && Object.keys(produto).length ? (
         <>
           <main className="wrapper">
-            <section className="section_details">
-              <NavBack />
-              <CardDetails produto={produto} />
-            </section>
-            <section className="section_details">
-              <CardDescrition produto={produto} />
-            </section>
+            <div className="container_max_width">
+              <section className="section_details ">
+                <NavBack />
+                <CardDetails produto={produto} />
+              </section>
+              <section className="section_details">
+                <CardDescrition produto={produto} />
+              </section>
+            </div>
           </main>
         </>
       ) : null}

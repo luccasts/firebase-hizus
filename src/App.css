@@ -22,9 +22,22 @@
     transform: rotate(360deg);
   }
 }
-
+.container-flex {
+  display: flex;
+  flex-direction: column;
+}
 .wrapper {
-  min-height: calc(100vh - 50px);
-  position: relative;
+  /* min-height: calc(100vh - 50px); */
+  /* position: relative; */
+  min-height: 100vh;
   margin: 1rem 1rem;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.container_max_width {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: auto;
 }

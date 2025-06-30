@@ -23,6 +23,13 @@
   --color-hr-nav: #8a2be2;
   --color-icon-user: #881ded;
 
+  /*Hamburger*/
+  --color-bg-hamburger: #1c1c1c;
+  --color-bg-shadow-hamburger: #000000;
+  --color-text-hamburger: #f7f7f7;
+  --color-bg-hamburger-hover: #222222;
+  --color-text-hamburger-hover: blueviolet;
+
   /*HOME*/
   --color-bg-shadow-home: #000000;
   --color-bg-home: #1675c2;
@@ -41,6 +48,9 @@
 
   /*purple*/
   --color-purple: rgb(139, 30, 222);
+
+  /*Width*/
+  --max-width: 1000px;
 }
 
 * {
@@ -67,5 +77,5 @@ nav ul li a {
 }
 
 main {
-  height: 100vh;
+  flex: 1;
 }

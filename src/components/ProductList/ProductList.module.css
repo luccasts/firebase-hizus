@@ -1,5 +1,5 @@
 .section_list {
-  max-width: 120rem;
+  max-width: var(--max-width);
   margin: auto auto;
 }
 .ul_list {
@@ -17,7 +17,7 @@
   color: var(--color-purple);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .ul_list {
     grid-template-columns: 1fr;
     grid-gap: 1.2rem;

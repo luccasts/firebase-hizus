@@ -31,7 +31,7 @@ const CardDetails = ({ produto }: IProps) => {
 
         <Button id={id}>Comprar</Button>
         <div className={styles.div_shoppingCart}>
-          <Button color="white" bgColor="#0a69c2" id={id}>
+          <Button color="white" bgColor="#9d0ac2" id={id}>
             Adicionar ao carrinho
             <AiOutlineShoppingCart size={22} />
           </Button>
