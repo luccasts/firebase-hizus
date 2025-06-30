@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Hamburger.css";
+import { Link } from "react-router-dom";
 
 export interface HamburgerProps {
   onClick: () => void;
@@ -7,7 +8,7 @@ export interface HamburgerProps {
 
 export function Hamburger(props: HamburgerProps) {
   const { onClick } = props;
-  const [isOpen, setOpen] = useState<boolean>(true);
+  const [isOpen, setOpen] = useState<boolean>(false);
   const handleClick = () => {
     setOpen((prev: boolean) => !prev);
     onClick();
@@ -22,17 +23,17 @@ export function Hamburger(props: HamburgerProps) {
       />
       <div className={`line ${isOpen ? "rotate-45deg" : "rotate-0"}`} />
       <div
-        onMouseLeave={() => setOpen(false)}
-        className={`${isOpen ? "test" : "null"}`}
+        // onMouseLeave={() => setOpen(false)}
+        className={`${isOpen ? "open_Hamburger" : "null"}`}
       >
         {isOpen ? (
           <>
             <ul className="list">
               <li>
-                <a href="/">Periféricos</a>
+                <Link to={"/perifericos"}>Periféricos</Link>
               </li>
               <li>
-                <a href="/">Hardware</a>
+                <Link to={"/hardware"}>Hardware</Link>
               </li>
             </ul>
           </>
