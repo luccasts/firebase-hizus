@@ -55,6 +55,17 @@
   color: var(--color-text-nav);
   text-decoration: none;
 }
+.logo_hamburger {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.logo_hamburger a {
+  height: 60px;
+}
+.logo_hamburger a img {
+  display: flex;
+}
 .hamburger-div {
   display: flex;
   justify-content: start;

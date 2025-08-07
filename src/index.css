@@ -6,12 +6,15 @@
   /*Home / Card*/
   --color-text: #111111;
   --color-purple: #6a0dad;
+
   /*SEARCH */
   --color-bg-search: #1e1e1e;
   --color-border-search: #6a0dad;
   --color-border-search-focus: #8a2be2;
   --color-text-search: #fff;
-  --color-text-search-type: #b3b3b3;
+  --color-text-search-type: #efefef;
+  --color-bg-search-pseudo-class: #171717;
+  --color-text-search-pseudo-class: #efefef;
 
   /*NAV*/
   --color-text-nav: #f7f7f7;
@@ -29,6 +32,7 @@
   --color-text-hamburger: #f7f7f7;
   --color-bg-hamburger-hover: #222222;
   --color-text-hamburger-hover: blueviolet;
+  --color-line-hamburger: #fff;
 
   /*HOME*/
   --color-bg-shadow-home: #000000;
@@ -78,4 +82,26 @@ nav ul li a {
 
 main {
   flex: 1;
+  min-height: 100vh;
+}
+
+input[type="search" i]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-image: url("assets/img/cancel_button.png");
+  background-size: contain;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.023);
+  border-radius: 100%;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-bg-search-pseudo-class) inset !important;
+  box-shadow: 0 0 0 1000px var(--color-bg-search-pseudo-class) inset !important;
+  -webkit-text-fill-color: var(--color-text-search-pseudo-class) !important;
+  caret-color: auto;
+  transition: background-color 5000s ease-in-out 0s;
 }

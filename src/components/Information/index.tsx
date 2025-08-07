@@ -26,7 +26,7 @@ function ProductInformation({ produto }: IProps) {
         </p>
         <p className="green-line">valor a vista:</p>
         <p className="green-line green-line-price">R${discountValue}</p>
-        <Button bg-color="green" id={id}>
+        <Button bg-color="green" color="white" id={id}>
           Comprar
         </Button>
         <Button color="white" bgColor="#970ac2" id={id}>
